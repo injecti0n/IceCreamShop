@@ -1,6 +1,6 @@
 package be.intecbrussel.eatables;
 
-public interface Eatable {
+public abstract interface Eatable {
 	
 	void eat();
 	
