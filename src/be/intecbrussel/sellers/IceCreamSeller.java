@@ -1,10 +1,15 @@
 package be.intecbrussel.sellers;
 
 import be.intecbrussel.eatables.Cone;
-import be.intecbrussel.eatables.Cone.Flavors;
+import be.intecbrussel.eatables.IceRocket;
+import be.intecbrussel.eatables.Magnum;
 
-public interface IceCreamSeller extends Profitable {
+public interface IceCreamSeller extends Profitable{
 
-	public Cone orderCone(Flavor[8]);
-	
+	Cone orderCone(Flavors[]);
+
+	IceRocket orderIceRocket();
+
+	Magnum orderMagnum(MagnumType);
+
 }
