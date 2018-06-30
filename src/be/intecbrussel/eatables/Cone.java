@@ -1,9 +1,9 @@
 package be.intecbrussel.eatables;
 
-public class Cone implements Eatable{
-	
-	Flavor[] balls;
-	
+public class Cone implements Eatable {
+
+	public Flavor[] balls;
+
 	public Cone() {
 		super();
 	}
@@ -14,7 +14,7 @@ public class Cone implements Eatable{
 	}
 
 	public void eat() {
-		
+
 	}
 
 }
