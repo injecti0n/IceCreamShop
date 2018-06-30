@@ -25,9 +25,21 @@ public abstract class IceCreamCar<Stock> implements IceCreamSeller, Profitable {
 		return null;
 				
 			}
-		
-		
 	
+	public Magnum prepareMagnum(MagnumType magnumtype) {
+		return null;
 		
+	}
+	
+	public IceRocket prepareRocket(IceRocket icerocket) {
+		return null;
+		
+	}
+	
+	public <Flavor> Cone prepareCone(Flavor[] flavor) {
+		return null;
+		
+	}
+	
 
 	}
