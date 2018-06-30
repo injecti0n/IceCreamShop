@@ -5,7 +5,14 @@ public class Magnum implements Eatable {
 	MagnumType MagnumType;
 
 	public void eat() {
+		
+		System.out.println(toString());
 
+	}
+
+	@Override
+	public String toString() {
+		return "Magnum [MagnumType=" + MagnumType + "]";
 	}
 
 	public Magnum(MagnumType MagnumType) {
