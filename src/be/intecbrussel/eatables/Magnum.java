@@ -2,17 +2,17 @@ package be.intecbrussel.eatables;
 
 public class Magnum implements Eatable {
 
+	// The types of flavors
+	public enum MagnumType {
+		STRAWBERRY, BANANA, CHOCOLATE, VANILLA, LEMON, STRACIATELLA, MOKKA, PISTACHE
+	}
+
 	MagnumType MagnumType;
 
 	public void eat() {
-		
+
 		System.out.println(toString());
 
-	}
-
-	@Override
-	public String toString() {
-		return "Magnum [MagnumType=" + MagnumType + "]";
 	}
 
 	public Magnum(MagnumType MagnumType) {
