@@ -1,16 +1,19 @@
 package be.intecbrussel.sellers;
 
 import be.intecbrussel.eatables.Cone;
+import be.intecbrussel.eatables.Cone.Flavors;
 import be.intecbrussel.eatables.IceRocket;
 import be.intecbrussel.eatables.Magnum;
+import be.intecbrussel.eatables.Magnum.MagnumType;
 
-public abstract class IceCreamCar implements IceCreamSeller, Profitable {
+public abstract class IceCreamCar<Stock> implements IceCreamSeller, Profitable {
 
 	private PriceList pricelist;
 	private Stock stock;
 	private double profit;
 	
-	public Cone orderCone(Flavors[]) {
+	public Cone orderCone(Flavors[] flavor) {
+		return null;
 			
 		}
 
@@ -18,7 +21,8 @@ public abstract class IceCreamCar implements IceCreamSeller, Profitable {
 				return null;
 			}
 
-	public Magnum orderMagnum(MagnumType) {
+	public Magnum orderMagnum(MagnumType magnumtype) {
+		return null;
 				
 			}
 		
