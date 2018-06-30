@@ -21,9 +21,6 @@ public class Cone implements Eatable {
 		this.balls = balls;
 	}
 
-	// The methods
-	// You should always use getters and setters
-	// https://stackoverflow.com/questions/1568091/why-use-getters-and-setters-accessors
 
 	// Getter
 	public Flavors[] getBalls() {
