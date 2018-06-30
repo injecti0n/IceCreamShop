@@ -13,7 +13,7 @@ public class Cone implements Eatable {
 	// The constructors
 	// Constructor Basic
 	public Cone() {
-		balls = new Flavors[0];
+		balls = new Flavors[8];
 	}
 
 	// Constructor with Flavors
