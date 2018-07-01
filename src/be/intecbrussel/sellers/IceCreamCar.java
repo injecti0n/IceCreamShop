@@ -12,11 +12,44 @@ public abstract class IceCreamCar<Stock> implements IceCreamSeller, Profitable {
 	private Stock stock;
 	private double profit;
 	
-	public Cone orderCone(Flavors[] flavor) {
-		return null;
-			
-		}
+	
+	 // Constructor
+    public IceCreamCar() {
 
+    }
+    
+    public IceCreamCar(PriceList priceList, Stock stock) {
+        this.pricelist = priceList;
+        this.stock = stock;
+    }
+	
+    // Methods
+    // Order Cone
+    @Override
+    public Cone orderCone(Flavors[] balls) {
+        this.prepareCone(balls);
+        return new Cone(balls);
+    }
+
+    
+//  // Prepare Cone
+  private Cone prepareCone(Flavors[] balls) {
+      int countCones = 1;
+
+      if (stock.getCones() < 0 || stock.getBalls() < 0) {
+          throw new Exception("No more Balls or Cones");
+      } else {
+          for (int i = 0; i < balls.length; i++) {
+              stock.setBalls(stock.getBalls() - balls.length);
+              profit += pricelist.getBallPrice();
+          }
+          System.out.println("Preparing your Balls on a cone");
+          countCones++;
+          stock.setCones(stock.getCones() - countCones);
+      }
+      return new Cone(balls);
+  }
+    
 	public IceRocket orderIceRocket() {
 				return null;
 			}
@@ -36,10 +69,14 @@ public abstract class IceCreamCar<Stock> implements IceCreamSeller, Profitable {
 		
 	}
 	
-	public <Flavor> Cone prepareCone(Flavor[] flavor) {
+	public IceRocket prepareRocket(IceRocket icerocket) {
 		return null;
 		
 	}
+	
+		
+		
+	
 	
 
 	}

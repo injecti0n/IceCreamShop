@@ -15,6 +15,11 @@ public class Magnum implements Eatable {
 
 	}
 
+	@Override
+	public String toString() {
+		return "Magnum [MagnumType=" + MagnumType + "]";
+	}
+
 	public Magnum(MagnumType MagnumType) {
 		super();
 		this.MagnumType = MagnumType;
