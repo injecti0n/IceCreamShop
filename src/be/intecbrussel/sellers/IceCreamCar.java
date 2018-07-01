@@ -7,7 +7,7 @@ import be.intecbrussel.eatables.Magnum;
 import be.intecbrussel.eatables.Magnum.MagnumType;
 import be.intecbrussel.sellers.Stock;
 
-public abstract class IceCreamCar implements IceCreamSeller, Profitable {
+public class IceCreamCar implements IceCreamSeller, Profitable {
 
 	private PriceList pricelist;
 	private Stock stock;
@@ -70,6 +70,12 @@ public abstract class IceCreamCar implements IceCreamSeller, Profitable {
 	public IceRocket prepareRocket(IceRocket icerocket) {
 		return null;
 
+	}
+
+	@Override
+	public double getProfit() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }

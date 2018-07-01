@@ -6,6 +6,8 @@ public class Cone implements Eatable {
 	public enum Flavors {
 		STRAWBERRY, BANANA, CHOCOLATE, VANILLA, LEMON, STRACIATELLA, MOKKA, PISTACHE
 	}
+	
+	
 
 	// The field
 	private Flavors[] balls;
@@ -13,7 +15,7 @@ public class Cone implements Eatable {
 	// The constructors
 	// Constructor Basic
 	public Cone() {
-		balls = new Flavors[0];
+		balls = new Flavors[8];
 	}
 
 	// Constructor with Flavors
