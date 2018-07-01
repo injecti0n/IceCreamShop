@@ -9,11 +9,12 @@ import be.intecbrussel.sellers.*;
 
 public class IceCreamApp2 {
     public static <PriceList> void main(String[] args) {
-    	PriceList priceList2 = new PriceList(2, 5, 8);
+  /*  	PriceList priceList2 = new PriceList(2, 5, 8);
 
         Stock stock = new Stock(1, 8, 2, 1);
 
-        IceCreamCar iceCar = new IceCreamCar(priceList2, stock);
+        
+        IceCreamCar<Stock> ice = new IceCreamCar(priceList2, stock);
 
         Eatable[] eatCar = {
                 iceCar.orderCone(new Flavors[]{Cone.Flavor.CHOCOLATE, Cone.Flavor.BANANA, Cone.Flavor.VANILLA}),
@@ -32,6 +33,6 @@ public class IceCreamApp2 {
             }
 
         }
-        System.out.println(iceCar.getProfit());
+        System.out.println(iceCar.getProfit());*/
     }
 }

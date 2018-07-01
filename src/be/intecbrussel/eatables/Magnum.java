@@ -7,7 +7,7 @@ public class Magnum implements Eatable {
 		STRAWBERRY, BANANA, CHOCOLATE, VANILLA, LEMON, STRACIATELLA, MOKKA, PISTACHE
 	}
 
-	MagnumType MagnumType;
+	private MagnumType MagnumType;
 
 	public void eat() {
 
