@@ -1,14 +1,19 @@
 package be.intecbrussel.application;
 
-import be.intecbrussel.eatables.Cone;
-import be.intecbrussel.eatables.Cone.Flavors;
-import be.intecbrussel.eatables.Eatable;
-import be.intecbrussel.eatables.Magnum;
 import be.intecbrussel.sellers.IceCreamCar;
-import be.intecbrussel.sellers.*;
+import be.intecbrussel.sellers.PriceList;
+import be.intecbrussel.sellers.Stock;
 
 public class IceCreamApp2 {
-    public static <PriceList> void main(String[] args) {
+    public static void main(String[] args) {
+    	
+    	PriceList priceList1 = new PriceList(2,5,8);
+    	
+    	Stock stock = new Stock(1,8,2,1);
+    	
+    	
+    	
+    	
   /*  	PriceList priceList2 = new PriceList(2, 5, 8);
 
         Stock stock = new Stock(1, 8, 2, 1);

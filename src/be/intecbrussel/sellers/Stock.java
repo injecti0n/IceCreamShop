@@ -22,6 +22,14 @@ public class Stock extends Cone {
 		return cones;
 	}
 
+	public Stock(int iceRockets, int cones, int balls, int magni) {
+		super();
+		this.iceRockets = iceRockets;
+		this.cones = cones;
+		this.balls = balls;
+		this.magni = magni;
+	}
+
 	public void setCones(int cones) {
 		this.cones = cones;
 	}
