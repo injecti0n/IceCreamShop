@@ -27,20 +27,25 @@ public class IceCreamCar implements IceCreamSeller, Profitable {
 	// Order Cone
 	@Override
 	public Cone orderCone(Flavors[] balls) {
-		this.prepareCone(balls);
+		try {
+			this.prepareCone(balls);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return new Cone(balls);
 	}
 
-	private void prepareCone(Flavors[] balls) {
-		int countCones = 1;
+	
+	
+	
 
-		if (stock.getCones() < 0 || stock.getballs() < 0) {
-			try {
-				throw new Exception("No more Balls or Cones");
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+	private void prepareCone(Flavors[] balls) {
+		int countCones=0;
+
+		if (stock.getCones() > 0 || stock.getballs() > 0) {
+			
+
 		} else {
 			for (int i = 0; i < balls.length; i++) {
 				stock.setBalls(stock.getballs() - balls.length);
@@ -50,8 +55,10 @@ public class IceCreamCar implements IceCreamSeller, Profitable {
 			countCones++;
 			stock.setCones(stock.getCones() - countCones);
 		}
-
+		
 	}
+
+	
 
 	public IceRocket orderIceRocket() {
 		return null;

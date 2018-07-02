@@ -30,7 +30,7 @@ public class IceCreamApp2 {
     	
     	 for (int i = 0; i < eatCar.length; i++) {
     		 try {
-				eatCar[i].eat();
+        		 eatCar[i].eat();
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				System.out.println("No More Ice To sell... Beat it!!");
