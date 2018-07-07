@@ -11,7 +11,7 @@ public class Magnum implements Eatable {
 
 	public void eat() {
 
-		System.out.println(toString());
+		System.out.println("Magnum...");
 
 	}
 

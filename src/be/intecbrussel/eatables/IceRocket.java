@@ -6,7 +6,7 @@ public class IceRocket implements Eatable {
 		
 	}
 	public void eat() {
-
+		System.out.println("Eating IceRocket...");
 	}
 
 }

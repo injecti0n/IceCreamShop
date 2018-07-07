@@ -36,6 +36,6 @@ public class Cone implements Eatable {
 
 	// Your Method from UML
 	public void eat() {
-		// Whatever
+		System.out.println("Cone Balls");
 	}
 }

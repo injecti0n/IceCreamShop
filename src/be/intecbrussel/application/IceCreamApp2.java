@@ -12,7 +12,7 @@ import be.intecbrussel.sellers.Stock;
 public class IceCreamApp2 {
     public static void main(String[] args) {
     	
-    	PriceList priceList1 = new PriceList(2,5,8);
+    	PriceList priceList1 = new PriceList(1.5,2.2,3.5);
     	
     	Stock stock = new Stock(1,8,2,1);
     	
@@ -22,10 +22,6 @@ public class IceCreamApp2 {
     	Eatable[] eatCar = {
     			IceShop.orderCone(new Flavors[]{Cone.Flavors.CHOCOLATE, Cone.Flavors.BANANA, Cone.Flavors.VANILLA}),
     			IceShop.orderCone(new Flavors[]{Cone.Flavors.VANILLA, Cone.Flavors.VANILLA}),
-    			IceShop.orderMagnum(MagnumType.CHOCOLATE),
-    			IceShop.orderMagnum(MagnumType.BANANA),
-    			
-    			IceShop.orderIceRocket()
         };
     	
     	 for (int i = 0; i < eatCar.length; i++) {
