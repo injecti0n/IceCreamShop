@@ -1,88 +1,77 @@
 package be.intecbrussel.sellers;
 
 import be.intecbrussel.eatables.Cone;
-import be.intecbrussel.eatables.Cone.Flavors;
+import be.intecbrussel.eatables.Flavor;
 import be.intecbrussel.eatables.IceRocket;
 import be.intecbrussel.eatables.Magnum;
-import be.intecbrussel.eatables.Magnum.MagnumType;
-import be.intecbrussel.sellers.Stock;
+import be.intecbrussel.eatables.MagnumType;
 
-public class IceCreamCar implements IceCreamSeller, Profitable {
+public class IceCreamCar implements IceCreamSeller {
 
-	private PriceList pricelist;
-	private Stock stock;
-	private double profit;
-
-	// Constructor
-	public IceCreamCar() {
-		super();
-	}
+	private PriceList priceList = new PriceList();
+	private Stock stock = new Stock();
+	private double totalProfit = 0;
 
 	public IceCreamCar(PriceList priceList, Stock stock) {
-		this.pricelist = priceList;
+		super();
+		this.priceList = priceList;
 		this.stock = stock;
 	}
 
-	// Methods
-	// Order Cone
-	@Override
-	public Cone orderCone(Flavors[] balls) {
-		try {
-			this.prepareCone(balls);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return new Cone(balls);
+	public Cone orderCone(Flavor[] balls) {
+		Cone ijsje = prepareCone(balls);			
+		return ijsje;	
 	}
 
-	
-	
-	
-
-	private void prepareCone(Flavors[] balls) {
-		int countCones=0;
-
-		if (stock.getCones() > 0 || stock.getballs() > 0) {
-			
-
-		} else {
-			for (int i = 0; i < balls.length; i++) {
-				stock.setBalls(stock.getballs() - balls.length);
-				profit += pricelist.getBallPrice();
-			}
-			System.out.println("Preparing your Balls on a cone");
-			countCones++;
-			stock.setCones(stock.getCones() - countCones);
+	private Cone prepareCone(Flavor[] balls) {
+		Cone ijsje = new Cone(balls);
+		
+		int stockCones = stock.getBalls();
+		int stockBalls = stock.getBalls();
+		
+		
+		stockCones -= 1;
+		for (int i =0; i < balls.length; i++) {
+			totalProfit += priceList.getBallPrice();
+			stockBalls -= 1;			
 		}
 		
+		stock.setBalls(stockBalls);
+		stock.setCones(stockCones);
+		
+		return ijsje;
 	}
-
-	
 
 	public IceRocket orderIceRocket() {
+		IceRocket raketje = prepareIceRocket();
 		return null;
 	}
-
-	public Magnum orderMagnum(MagnumType magnumtype) {
-		return null;
-
+	
+	private IceRocket prepareIceRocket() {
+		int stockRacket = stock.getIceRockets();
+		totalProfit += priceList.getRocketPrice();
+		IceRocket raketje = new IceRocket();
+		stock.setIceRockets(stockRacket);		
+		return raketje;
 	}
-
-	public Magnum prepareMagnum(MagnumType magnumtype) {
-		return null;
-
+	
+	public Magnum orderMagnum(MagnumType type) {
+		Magnum magnumke = prepareMagnum(type);
+		
+		return magnumke;
 	}
-
-	public IceRocket prepareRocket(IceRocket icerocket) {
-		return null;
-
+	
+	public Magnum prepareMagnum(MagnumType type) {
+		int stockMagnum = stock.getIceRockets();
+		totalProfit += priceList.getMagnumPrice(type);
+		Magnum magnumke = new Magnum(type);
+		stock.setIceRockets(stockMagnum );		
+		return magnumke;
 	}
 
 	@Override
 	public double getProfit() {
-		// TODO Auto-generated method stub
-		return 0;
+		return totalProfit;
 	}
 
 }

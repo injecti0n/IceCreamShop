@@ -2,40 +2,18 @@ package be.intecbrussel.eatables;
 
 public class Cone implements Eatable {
 
-	// The types of flavors
-	public enum Flavors {
-		STRAWBERRY, BANANA, CHOCOLATE, VANILLA, LEMON, STRACIATELLA, MOKKA, PISTACHE
-	}
-	
-	
+	private Flavor[] Balls;
 
-	// The field
-	private Flavors[] balls;
-
-	// The constructors
-	// Constructor Basic
 	public Cone() {
-		balls = new Flavors[8];
+		super();
 	}
 
-	// Constructor with Flavors
-	public Cone(Flavors[] balls) {
-		this.balls = balls;
+	public Cone(Flavor[] balls) {
+		super();
+		Balls = balls;
 	}
 
-
-	// Getter
-	public Flavors[] getBalls() {
-		return balls;
-	}
-
-	// Setter
-	public void setBalls(Flavors[] balls) {
-		this.balls = balls;
-	}
-
-	// Your Method from UML
 	public void eat() {
-		System.out.println("Cone Balls");
+		System.out.println("eating a cone with" + Balls);
 	}
 }
