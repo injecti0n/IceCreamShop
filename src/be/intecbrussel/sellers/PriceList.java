@@ -43,14 +43,19 @@ public class PriceList {
 		switch (type) {
 		case ALPINENUTS:
 			magnumStandardPrice *= 1.3;
+			break;
 		case BLACKCHOCOLATE:
 			magnumStandardPrice *= 1;
+			break;
 		case MILKCHOCOLATE:
 			magnumStandardPrice *= 1;
+			break;
 		case WHITECHOCOLATE:
 			magnumStandardPrice *= 1;
+			break;
 		case ROMANTICSSTRAWBERRIES:
 			magnumStandardPrice *= 1.6;
+			break;
 		}
 		return magnumStandardPrice;
 
