@@ -44,14 +44,19 @@ public class IceCreamCar implements IceCreamSeller {
 
 	public IceRocket orderIceRocket() {
 		IceRocket raketje = prepareIceRocket();
-		return null;
+		return raketje;
 	}
 	
 	private IceRocket prepareIceRocket() {
 		int stockRacket = stock.getIceRockets();
+		IceRocket raketje=null;
+		if(stockRacket>0) {
+		stockRacket--;
 		totalProfit += priceList.getRocketPrice();
-		IceRocket raketje = new IceRocket();
-		stock.setIceRockets(stockRacket);		
+		raketje = new IceRocket();
+		stock.setIceRockets(stockRacket);
+		}
+		
 		return raketje;
 	}
 	
@@ -73,5 +78,7 @@ public class IceCreamCar implements IceCreamSeller {
 	public double getProfit() {
 		return totalProfit;
 	}
+
+	
 
 }

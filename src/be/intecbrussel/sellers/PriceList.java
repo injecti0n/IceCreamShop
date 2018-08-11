@@ -9,13 +9,25 @@ public class PriceList {
 	private double magnumStandardPrice;
 
 	public PriceList() {
-		super();
+		this(0,0,0);
 	}
 
 	public PriceList(double ballPrice, double rocketPrice, double magnumStandardPrice) {
-		super();
+		
 		this.ballPrice = ballPrice;
 		this.rocketPrice = rocketPrice;
+		this.magnumStandardPrice = magnumStandardPrice;
+	}
+
+	public void setBallPrice(double ballPrice) {
+		this.ballPrice = ballPrice;
+	}
+
+	public void setRocketPrice(double rocketPrice) {
+		this.rocketPrice = rocketPrice;
+	}
+
+	public void setMagnumStandardPrice(double magnumStandardPrice) {
 		this.magnumStandardPrice = magnumStandardPrice;
 	}
 
@@ -23,46 +35,30 @@ public class PriceList {
 		return ballPrice;
 	}
 
-	public void setBallPrice(double ballPrice) {
-		this.ballPrice = ballPrice;
-	}
-
 	public double getRocketPrice() {
 		return rocketPrice;
 	}
 
-	public void setRocketPrice(double rocketPrice) {
-		this.rocketPrice = rocketPrice;
-	}
-
-	public double getMagnumStandardPrice() {
-		return magnumStandardPrice;
-	}
-
 	public double getMagnumPrice(MagnumType type) {
+		double magnumPrice = magnumStandardPrice;
 		switch (type) {
 		case ALPINENUTS:
-			magnumStandardPrice *= 1.3;
+			magnumPrice *= 1.3;
 			break;
 		case BLACKCHOCOLATE:
-			magnumStandardPrice *= 1;
+			magnumPrice *= 1;
 			break;
 		case MILKCHOCOLATE:
-			magnumStandardPrice *= 1;
+			magnumPrice *= 1;
 			break;
 		case WHITECHOCOLATE:
-			magnumStandardPrice *= 1;
+			magnumPrice *= 1;
 			break;
-		case ROMANTICSSTRAWBERRIES:
-			magnumStandardPrice *= 1.6;
+		case ROMANTICSTRAWBERRIES:
+			magnumPrice *= 1.6;
 			break;
 		}
-		return magnumStandardPrice;
-
-	}
-
-	public void setMagnumStandardPrice(double magnumStandardPrice) {
-		this.magnumStandardPrice = magnumStandardPrice;
+		return magnumPrice;
 	}
 
 }

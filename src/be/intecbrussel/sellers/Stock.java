@@ -1,17 +1,17 @@
 package be.intecbrussel.sellers;
 
-import be.intecbrussel.eatables.Cone;
-
 public class Stock {
 
-	int iceRockets = 100;
-	int cones = 300;
-	int balls = 1000;
-	int magni = 50;
+	private int iceRockets = 100;
+	private int cones = 300;
+	private int balls = 1000;
+	private int magni = 50;
 		
 	public Stock() {
 		super();
 	}
+	
+	
 	public Stock(int iceRockets, int cones, int balls, int magni) {
 		super();
 		this.iceRockets = iceRockets;
@@ -44,5 +44,5 @@ public class Stock {
 		this.magni = magni;
 	}
 	
-
+	
 }
